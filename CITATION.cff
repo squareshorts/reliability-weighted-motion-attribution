@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
 title: "Reliability-Weighted Attribution of Object Motion under Reduced Otolith Reliability: reproducibility code and outputs"
-version: 1.0.0
+version: 1.0.1
 authors:
   - family-names: "Silveira"
     given-names: "Antonio da Silva"

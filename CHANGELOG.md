@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.1] - 2026-08-06
+
+### Changed
+- Bumped version to trigger Zenodo webhook release capture.
+
 ## [1.0.0] - 2026-08-06
 
 ### Added
