@@ -1,7 +1,5 @@
 # Reliability-Weighted Attribution of Object Motion under Reduced Otolith Reliability: reproducibility code and outputs
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1234567.svg)](https://doi.org/10.5281/zenodo.1234567)
-
 This repository contains the canonical reproducibility code and outputs for the manuscript "Reliability-Weighted Attribution of Object Motion under Reduced Otolith Reliability".
 
 ## Reproduction Instructions
