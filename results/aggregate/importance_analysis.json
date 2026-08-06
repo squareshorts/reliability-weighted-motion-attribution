@@ -1,0 +1,108 @@
+{
+  "main_effects": {
+    "sigma_canal": {
+      "spearman_rho": -0.4864664944664945,
+      "spearman_p": 1.5597458104307286e-60,
+      "prcc": -0.8427882551912627,
+      "cv_permutation_importance": 0.4511988170567255
+    },
+    "sigma_oto_base": {
+      "spearman_rho": 0.7753969993969994,
+      "spearman_p": 1.8503804757904334e-201,
+      "prcc": 0.9320977939352711,
+      "cv_permutation_importance": 1.1611598589701484
+    },
+    "sigma_vis": {
+      "spearman_rho": -0.12064890064890066,
+      "spearman_p": 0.00013105928772458417,
+      "prcc": -0.3454538688827982,
+      "cv_permutation_importance": 0.017080593353904272
+    },
+    "sigma_not": {
+      "spearman_rho": 0.05686757686757687,
+      "spearman_p": 0.07225370102248815,
+      "prcc": 0.0664002937880706,
+      "cv_permutation_importance": 3.5131786755226966e-05
+    },
+    "q_omega": {
+      "spearman_rho": 0.26333595533595533,
+      "spearman_p": 2.5205033943337046e-17,
+      "prcc": 0.6238949223970945,
+      "cv_permutation_importance": 0.12135541760517246
+    },
+    "q_a": {
+      "spearman_rho": -0.10501768501768502,
+      "spearman_p": 0.0008810255217081746,
+      "prcc": -0.39773216156302227,
+      "cv_permutation_importance": 0.07494630589861524
+    },
+    "q_obj": {
+      "spearman_rho": 0.011260475260475262,
+      "spearman_p": 0.7221001448765951,
+      "prcc": 0.06166396770887827,
+      "cv_permutation_importance": 0.00026447294094327666
+    },
+    "eta_fast": {
+      "spearman_rho": -0.06961948561948562,
+      "spearman_p": 0.027702097677611913,
+      "prcc": -0.03450611769347257,
+      "cv_permutation_importance": -0.0004405798084362012
+    },
+    "eta_slow": {
+      "spearman_rho": 0.04584851784851785,
+      "spearman_p": 0.14739177265258682,
+      "prcc": 0.021238451682026618,
+      "cv_permutation_importance": 0.0003007147786002839
+    },
+    "tau_not": {
+      "spearman_rho": -0.05943745143745144,
+      "spearman_p": 0.06025982660308604,
+      "prcc": 0.05117829499616831,
+      "cv_permutation_importance": 0.0003660945415432737
+    },
+    "B_omega": {
+      "spearman_rho": -0.07877983877983878,
+      "spearman_p": 0.01270277384175769,
+      "prcc": -0.12765132938070914,
+      "cv_permutation_importance": 0.00026620133846013696
+    },
+    "B_a": {
+      "spearman_rho": -0.0959111639111639,
+      "spearman_p": 0.002395917142775227,
+      "prcc": -0.2525927905263527,
+      "cv_permutation_importance": 0.0053261492623539256
+    }
+  },
+  "top_interactions": {
+    "sigma_canal_x_q_omega": {
+      "prcc_interaction": 0.23994571245134988
+    },
+    "q_a_x_eta_slow": {
+      "prcc_interaction": -0.19561678180784475
+    },
+    "sigma_canal_x_sigma_oto_base": {
+      "prcc_interaction": -0.1816504413835763
+    },
+    "sigma_canal_x_sigma_vis": {
+      "prcc_interaction": 0.17906425506049384
+    },
+    "q_a_x_tau_not": {
+      "prcc_interaction": -0.17553658211535106
+    },
+    "sigma_oto_base_x_B_a": {
+      "prcc_interaction": -0.16378248947595925
+    },
+    "q_omega_x_q_a": {
+      "prcc_interaction": -0.15177768201851652
+    },
+    "q_a_x_eta_fast": {
+      "prcc_interaction": -0.15105031889943937
+    },
+    "q_a_x_B_omega": {
+      "prcc_interaction": -0.1491805523928823
+    },
+    "q_a_x_q_obj": {
+      "prcc_interaction": -0.12989892794094704
+    }
+  }
+}

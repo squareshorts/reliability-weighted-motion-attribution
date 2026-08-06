@@ -1,0 +1,9 @@
+{
+  "simulation_variant": "corrected_closed_loop",
+  "forward_initialization": "corrected",
+  "forward_rule": "canonical_two_rate",
+  "context_method": "leaky_llr",
+  "oto_variance_policy": "belief_weighted",
+  "eye_compensation": true,
+  "description": "Canonical model: contemporaneous within-trial eye dynamics and Appendix-compliant eye compensation."
+}

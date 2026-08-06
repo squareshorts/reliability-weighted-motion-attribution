@@ -1,0 +1,11 @@
+{
+  "n_samples": 1000,
+  "failed_samples": 0,
+  "failed_percentage": 0.0,
+  "valid_samples": 1000,
+  "positive_effect_percentage": 99.2,
+  "robust_positive_percentage": 85.9,
+  "robust_reversal_percentage": 0.1,
+  "attenuation_percentage": 3.5000000000000004,
+  "ref_mean_effect": 0.027629935580756843
+}

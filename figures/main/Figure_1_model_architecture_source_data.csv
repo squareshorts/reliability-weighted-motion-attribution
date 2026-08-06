@@ -1,0 +1,46 @@
+record_type,id,label,category,x,y,width,height,from,to,route,edge_label
+node,latent,"Latent states $\omega,\ a,\ v_{\rm obj}$",generative signal,12,86,16,7,,,,
+node,canal,Canal observation,observation,34,94,15,6.5,,,,
+node,otolith,Otolith observation,observation,34,86,15,6.5,,,,
+node,retinal,Raw retinal observation,observation,34,77.5,15,6.5,,,,
+node,eye_comp,Eye-compensated visual observation,observation,13,61,18,7.5,,,,
+node,comparator,Visual comparator $\epsilon_{\rm vis}=\tilde y_{\rm vis}-\hat y_{\rm vis}$,estimate,39,61,19,8.5,,,,
+node,kalman_update,Kalman state update,estimate,70,61,14,7,,,,
+node,estimated_states,"Estimated states $\hat\omega,\ \hat a,\ \hat v_{\rm obj}$",estimate,91,61,16,7.5,,,,
+node,otolith_innovation,Otolith innovation,estimate,11,40,14,7,,,,
+node,context,Reliability-context inference $p_t$,reliability context,31,40,17,7,,,,
+node,hypothesis_B,Variance hypothesis $B$,reliability context,52,44,11,5,,,,
+node,hypothesis_R,Variance hypothesis $R$,reliability context,52,36.5,11,5,,,,
+node,weighted_variance,"Previous-belief- weighted otolith variance $R_{\rm oto,t}$",reliability context,76,40,20,8.5,,,,
+node,forward_prediction,Forward visual prediction $\hat y_{\rm vis}$,adaptive parameter,42,29.5,17,7,,,,
+node,adaptation,Context-gated forward-model adaptation,adaptive parameter,67,29.5,22,7.5,,,,
+node,vor_okr,VOR and OKR pathways,gaze feedback,30,11.5,15,6.5,,,,
+node,eye_plant,Eye plant,gaze feedback,52,11.5,13,6,,,,
+node,eye_velocity,Eye velocity $\dot e$,gaze feedback,75,11.5,13,6,,,,
+edge,latent_to_canal,,signal,,,,,latent,canal,"20.00,86.00;23.00,86.00;23.00,94.00;26.50,94.00",
+edge,latent_to_otolith,,signal,,,,,latent,otolith,"20.00,86.00;26.50,86.00",
+edge,latent_to_retinal,,signal,,,,,latent,retinal,"20.00,86.00;23.00,86.00;23.00,77.50;26.50,77.50",$A_{\rm true}x$
+edge,canal_to_kalman_update,,signal,,,,,canal,kalman_update,"41.50,94.00;70.00,94.00;70.00,64.50",$y_{\rm canal}$
+edge,otolith_to_kalman_update,,signal,,,,,otolith,kalman_update,"41.50,86.00;64.00,86.00;64.00,66.50;67.00,64.50",$y_{\rm oto}$
+edge,otolith_to_otolith_innovation,,signal,,,,,otolith,otolith_innovation,"26.50,86.00;23.50,86.00;23.50,49.00;11.00,49.00;11.00,43.50",
+edge,retinal_to_eye_comp,,signal,,,,,retinal,eye_comp,"34.00,74.25;34.00,72.00;25.00,72.00;25.00,61.00;22.00,61.00",
+edge,eye_comp_to_comparator,,signal,,,,,eye_comp,comparator,"22.00,61.00;29.50,61.00",$\tilde y_{\rm vis}$
+edge,comparator_to_kalman_update,,signal,,,,,comparator,kalman_update,"48.50,61.00;63.00,61.00",$K_{\rm vis}\epsilon_{\rm vis}$
+edge,kalman_update_to_estimated_states,,signal,,,,,kalman_update,estimated_states,"77.00,61.00;83.00,61.00",
+edge,estimated_states_to_forward_prediction,,signal,,,,,estimated_states,forward_prediction,"91.00,57.25;91.00,23.50;42.00,23.50;42.00,26.00",estimated state
+edge,forward_prediction_to_comparator,,signal,,,,,forward_prediction,comparator,"42.00,33.00;42.00,56.75",$\hat y_{\rm vis}$
+edge,otolith_innovation_to_context,,signal,,,,,otolith_innovation,context,"18.00,40.00;22.50,40.00",
+edge,context_to_hypothesis_B,,signal,,,,,context,hypothesis_B,"39.50,40.00;44.00,40.00;44.00,44.00;46.50,44.00",
+edge,context_to_hypothesis_R,,signal,,,,,context,hypothesis_R,"39.50,40.00;44.00,40.00;44.00,36.50;46.50,36.50",
+edge,hypothesis_B_to_weighted_variance,,signal,,,,,hypothesis_B,weighted_variance,"57.50,44.00;62.00,44.00;62.00,40.00;66.00,40.00",
+edge,hypothesis_R_to_weighted_variance,,signal,,,,,hypothesis_R,weighted_variance,"57.50,36.50;62.00,36.50;62.00,40.00;66.00,40.00",
+edge,weighted_variance_to_kalman_update,,signal,,,,,weighted_variance,kalman_update,"76.00,44.25;76.00,53.50;72.00,57.50","$R_{\rm oto,t}$"
+edge,context_to_adaptation,,gating,,,,,context,adaptation,"31.00,36.50;31.00,24.70;67.00,24.70;67.00,25.75",context gate
+edge,comparator_to_adaptation,,signal,,,,,comparator,adaptation,"47.00,56.75;47.00,52.00;90.00,52.00;90.00,29.50;78.00,29.50",$\epsilon_{\rm vis}$
+edge,adaptation_to_forward_prediction,,signal,,,,,adaptation,forward_prediction,"56.00,29.50;50.50,29.50",$A_t$
+edge,estimated_states_to_vor_okr,,signal,,,,,estimated_states,vor_okr,"96.00,57.25;96.00,19.00;30.00,19.00;30.00,14.75",
+edge,vor_okr_to_eye_plant,,signal,,,,,vor_okr,eye_plant,"37.50,11.50;45.50,11.50",commands
+edge,eye_plant_to_eye_velocity,,signal,,,,,eye_plant,eye_velocity,"58.50,11.50;68.50,11.50",
+edge,eye_velocity_to_eye_comp,,signal,,,,,eye_velocity,eye_comp,"75.00,14.50;75.00,17.00;1.00,17.00;1.00,61.00;4.00,61.00","+ eye-velocity
+restoration"
+edge,eye_velocity_to_retinal,,signal,,,,,eye_velocity,retinal,"75.00,8.50;75.00,3.20;99.00,3.20;99.00,77.50;41.50,77.50",$-$ eye-velocity contribution

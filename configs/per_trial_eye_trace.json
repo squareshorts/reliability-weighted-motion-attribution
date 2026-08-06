@@ -1,0 +1,8 @@
+{
+  "simulation_variant": "per_trial_eye_trace",
+  "forward_initialization": "legacy",
+  "forward_rule": "legacy_tracking",
+  "oto_variance_policy": "adaptive_legacy",
+  "eye_compensation": false,
+  "description": "Diagnostic only: each trial receives a separately prerecorded eye trace generated from that trial's events."
+}

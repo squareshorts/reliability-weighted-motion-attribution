@@ -1,0 +1,25 @@
+{
+  "title": "Reliability-Weighted Attribution of Object Motion under Reduced Otolith Reliability: reproducibility code and outputs",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "version": "1.0.0",
+  "creators": [
+    {
+      "name": "Silveira, Antonio da Silva",
+      "affiliation": "Federal University of Par\u00e1"
+    },
+    {
+      "name": "Pereira Jr., Antonio",
+      "affiliation": "Federal University of Par\u00e1"
+    }
+  ],
+  "description": "Canonical reproducibility code and archived outputs for the manuscript Reliability-Weighted Attribution of Object Motion under Reduced Otolith Reliability.",
+  "keywords": [
+    "computational neuroscience",
+    "vestibular system",
+    "visual-vestibular integration",
+    "internal models",
+    "object motion"
+  ]
+}
