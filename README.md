@@ -30,3 +30,21 @@ A full run will re-verify the following canonical metrics against the archived r
 ## License
 
 Software is provided under the MIT License. Data and numerical outputs are provided under CC-BY-4.0.
+
+## Extended analyses (v1.1.0)
+
+Version 1.1.0 adds the structural comparisons and sensitivity analyses supporting the expanded manuscript analyses.
+
+To verify the extended-analysis invariants:
+
+```powershell
+python -m pytest -q tests/test_extended_analyses.py
+```
+
+To regenerate the extended results and figures:
+
+```powershell
+python scripts/run_extended_analyses.py
+```
+
+Outputs are written to `results/extended/` and `figures/extended/`.

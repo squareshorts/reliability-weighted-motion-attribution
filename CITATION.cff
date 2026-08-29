@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
 title: "Reliability-Weighted Attribution of Object Motion under Reduced Otolith Reliability: reproducibility code and outputs"
-version: 1.0.1
+version: 1.1.0
 authors:
   - family-names: "Silveira"
     given-names: "Antonio da Silva"
@@ -11,7 +11,7 @@ authors:
     given-names: "Antonio"
     affiliation: "Federal University of Pará"
 license: MIT
-repository-code: "https://github.com/OWNER/reliability-weighted-motion-attribution"
+repository-code: "https://github.com/squareshorts/reliability-weighted-motion-attribution"
 keywords:
   - computational neuroscience
   - vestibular system

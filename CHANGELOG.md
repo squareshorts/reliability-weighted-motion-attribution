@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0] - 2026-08-29
+
+### Added
+- Extended structural-model, recovery, threshold, context-mapping, innovation, and targeted-sensitivity analyses supporting the revised manuscript.
+- Seed-level and aggregate outputs, figures, and invariant tests.
+
+### Changed
+- Reproducibility metadata updated to version 1.1.0.
+
 ## [1.0.1] - 2026-08-06
 
 ### Changed
