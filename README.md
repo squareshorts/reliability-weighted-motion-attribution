@@ -48,3 +48,21 @@ python scripts/run_extended_analyses.py
 ```
 
 Outputs are written to `results/extended/` and `figures/extended/`.
+
+## Revision 2 additions (v1.2.0)
+
+Version 1.2.0 adds two independent nonrecurrent comparison models used in the second-round manuscript revision: direct sensory subtraction and static Bayesian causal attribution. The archive includes 30-seed outputs and aggregate summaries for both models, together with the cleaned Figure 5 generator used for the revised presentation.
+
+To regenerate the independent comparison outputs:
+
+```powershell
+python scripts/run_independent_baselines.py
+```
+
+To regenerate the revised Figure 5 from the archived source-data tables:
+
+```powershell
+python figures/main/Figure_5_uncertainty_parameter_robustness_v1_2.py
+```
+
+The new comparison outputs are written to `results/extended/independent_baselines_seedlevel.csv` and `results/extended/independent_baselines_summary.csv`.
