@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0] - 2026-09-11
+
+### Added
+- Two independent nonrecurrent comparison models: direct sensory subtraction and static Bayesian causal attribution.
+- Seed-level and aggregate outputs for the independent comparison models.
+- Revision-2 Figure 5 generator with simplified panel-B annotation.
+
+### Changed
+- Updated reproducibility metadata to version 1.2.0.
+- Revised Figure 5B to remove the redundant distribution-statistics callout and use an unboxed reference-line legend.
+- Extended the archive to support the second-round reviewer revisions.
+
 ## [1.1.0] - 2026-08-29
 
 ### Added
